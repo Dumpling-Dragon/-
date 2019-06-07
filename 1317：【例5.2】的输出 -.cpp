@@ -31,4 +31,4 @@ int main()
 	cin>>n>>r;
 	search(1); 
 	return 0;
-}//
+}
