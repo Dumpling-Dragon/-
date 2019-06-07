@@ -9,19 +9,19 @@ void print()
         cout<<"  "<<a[i];
     cout<<endl;
 }
-void search(int step)//Ò»¹²Èý¸ö£¬·ÖÈý²½Ìî 
+void search(int step)//ä¸€å…±ä¸‰ä¸ªï¼Œåˆ†ä¸‰æ­¥å¡« 
 {
-	for(int i=a[step-1]/*²»¼ÓÕâ¸ö¾Í±ä³ÉÅÅÁÐÁË*/;i<=n;i++)//Ëã·ûÊýÁ¿£¬¼´¿ÉÌîÊýÁ¿ 
+	for(int i=a[step-1]/*ä¸åŠ è¿™ä¸ªå°±å˜æˆæŽ’åˆ—äº†*/;i<=n;i++)//ç®—ç¬¦æ•°é‡ï¼Œå³å¯å¡«æ•°é‡ 
 	{
 		if(!flag[i])
 		{
 			flag[i]=true;
-			a[step]=i;//µÚ¼¸¸ö¿ÕÎ» 
-			if(step==r)//ÌîÂú
+			a[step]=i;//ç¬¬å‡ ä¸ªç©ºä½ 
+			if(step==r)//å¡«æ»¡
 			  print();
 			else 
 			  search(step+1);
-			flag[i]=0;//°Ñµ±Ç°²½ÖèÌîµÄÊý×ÖÇåµô 
+			flag[i]=0;//æŠŠå½“å‰æ­¥éª¤å¡«çš„æ•°å­—æ¸…æŽ‰ 
 		}
 	}
 }
@@ -31,4 +31,4 @@ int main()
 	cin>>n>>r;
 	search(1); 
 	return 0;
-}
+}//å“ˆå“ˆå“ˆ 
